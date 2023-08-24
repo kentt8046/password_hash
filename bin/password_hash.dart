@@ -1,5 +1,7 @@
-import 'package:password_hash/password_hash.dart' as password_hash;
+import 'package:password_hash/password_hash.dart';
 
 void main(List<String> arguments) {
-  print('Hello world: ${password_hash.calculate()}!');
+  final hash = generatePasswordHash('password');
+  print(hash);
+  print(verifyPassword('password', hash));
 }
